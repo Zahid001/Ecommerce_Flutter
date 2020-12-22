@@ -1,6 +1,8 @@
 import 'dart:io';
 
+import 'package:e_commerce_app/horizontalListView.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 void main() {
   runApp(HomePage());
@@ -14,9 +16,28 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    Widget image_carousel = Container(
+      height: 200.0,
+      child: Carousel(
+        boxFit: BoxFit.cover,
+        images: [
+          AssetImage('images/c1.jpg'),
+          AssetImage('images/m1.jpeg'),
+          AssetImage('images/m2.jpg'),
+          AssetImage('images/w1.jpeg'),
+          AssetImage('images/w3.jpeg'),
+          AssetImage('images/w4.jpeg'),
+        ],
+        animationCurve: Curves.fastLinearToSlowEaseIn,
+        dotSize: 4,
+        indicatorBgPadding: 6,
+      ),
+    );
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          elevation: 1,
           title: Text('Demo'),
           actions: [
             IconButton(
@@ -104,6 +125,21 @@ class _HomePageState extends State<HomePage> {
               ),
             ],
           ),
+        ),
+        body: ListView(
+          children: [
+            image_carousel,
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Categories',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            HorizontalListView(),
+          ],
         ),
       ),
     );
