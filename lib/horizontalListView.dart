@@ -1,3 +1,4 @@
+import 'package:e_commerce_app/pages/product_details.dart';
 import 'package:flutter/material.dart';
 
 class HorizontalListView extends StatelessWidget {
@@ -82,22 +83,3 @@ class Category extends StatelessWidget {
     );
   }
 }
-
-/*
-
-ListTile(
-              title: Image.asset(
-                imageLocation,
-                width: 100.0,
-                height: 80.0,
-              ),
-              subtitle: Container(
-                alignment: Alignment.topCenter,
-                child: Text(
-                  imageCaption,
-                  style: new TextStyle(fontSize: 12.0),
-                ),
-              )),
-
-
-*/
