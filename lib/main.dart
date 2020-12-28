@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:e_commerce_app/horizontalListView.dart';
 import 'package:e_commerce_app/products.dart';
 import 'package:flutter/material.dart';
