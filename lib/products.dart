@@ -26,6 +26,24 @@ class _ProductsState extends State<Products> {
       "picture": 'images/products/pants2.jpeg',
       "price": '120.0',
       "old_price": "180"
+    },
+    {
+      "name": "Dress",
+      "picture": 'images/products/dress1.jpeg',
+      "price": '120.0',
+      "old_price": "180"
+    },
+    {
+      "name": "Dress2",
+      "picture": 'images/products/dress2.jpeg',
+      "price": '120.0',
+      "old_price": "180"
+    },
+    {
+      "name": "Hills",
+      "picture": 'images/products/hills2.jpeg',
+      "price": '120.0',
+      "old_price": "180"
     }
   ];
   @override
@@ -76,25 +94,22 @@ class SingleProduct extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
               footer: Container(
-                height: 60,
-                color: Colors.white54,
-                child: ListTile(
-                  title: Text(
-                    '\$$price',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w800, color: Colors.red),
-                  ),
-                  subtitle: Text(
-                    '\$$oldPrice',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w800,
-                      decoration: TextDecoration.lineThrough,
+                height: 20,
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        name,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
                     ),
-                  ),
-                  leading: Text(
-                    name,
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
+                    Text(
+                      '\$$price',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w800, color: Colors.red),
+                    ),
+                  ],
                 ),
               ),
             ),

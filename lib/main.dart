@@ -30,6 +30,7 @@ class _HomePageState extends State<HomePage> {
         animationCurve: Curves.fastLinearToSlowEaseIn,
         dotSize: 4,
         indicatorBgPadding: 6,
+        dotBgColor: Colors.transparent,
       ),
     );
 
